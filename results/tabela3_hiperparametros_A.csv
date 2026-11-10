@@ -1,0 +1,4 @@
+﻿Modelo,Configuração selecionada,F1 médio na validação,Desvio padrão
+Regressão Logística,C = 0.01,0.3986,0.0054
+Árvore de Decisão,max_depth = 3; min_samples_leaf = 50,0.4418,0.0018
+MLP,"alpha = 0.001; hidden_layer_sizes = [64, 32]",0.4414,0.0019

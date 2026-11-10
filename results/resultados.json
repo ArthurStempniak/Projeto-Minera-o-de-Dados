@@ -1,0 +1,585 @@
+{
+  "arquivo": {
+    "nome": "KaggleV2-May-2016.csv",
+    "sha256": "9132d3e7d0246617df9041d3764f20ad6f08e7b0d9f0997fa254fc5e52eda27d",
+    "bytes": 10739535
+  },
+  "base_original": {
+    "linhas": 110527,
+    "colunas": 14,
+    "pacientes": 62299,
+    "bairros": 81,
+    "agendamento_min": "2015-11-10",
+    "agendamento_max": "2016-06-08",
+    "consulta_min": "2016-04-29",
+    "consulta_max": "2016-06-08",
+    "consulta_tem_horario": false,
+    "valores_handcap": {
+      "0": 108286,
+      "1": 2042,
+      "2": 183,
+      "3": 13,
+      "4": 3
+    }
+  },
+  "qualidade": [
+    {
+      "Verificação": "Valores ausentes",
+      "Quantidade": 0,
+      "Tratamento": "Nenhuma imputação necessária"
+    },
+    {
+      "Verificação": "Linhas duplicadas completas",
+      "Quantidade": 0,
+      "Tratamento": "Nenhuma remoção"
+    },
+    {
+      "Verificação": "AppointmentID repetido",
+      "Quantidade": 0,
+      "Tratamento": "Nenhuma remoção"
+    },
+    {
+      "Verificação": "Duplicadas sem AppointmentID",
+      "Quantidade": 618,
+      "Tratamento": "Mantidas como consultas distintas"
+    },
+    {
+      "Verificação": "Pacientes com mais de uma consulta",
+      "Quantidade": 24379,
+      "Tratamento": "Mantidos; agrupados na validação"
+    },
+    {
+      "Verificação": "Consultas desses pacientes",
+      "Quantidade": 72607,
+      "Tratamento": "Mantidas"
+    },
+    {
+      "Verificação": "Idade negativa",
+      "Quantidade": 1,
+      "Tratamento": "Removida"
+    },
+    {
+      "Verificação": "Idade igual a zero",
+      "Quantidade": 3539,
+      "Tratamento": "Mantida"
+    },
+    {
+      "Verificação": "Idade acima de 100 anos",
+      "Quantidade": 7,
+      "Tratamento": "Mantida e registrada como possível anomalia"
+    },
+    {
+      "Verificação": "Consultas anteriores ao agendamento",
+      "Quantidade": 5,
+      "Tratamento": "Removidas"
+    },
+    {
+      "Verificação": "Handcap com códigos 2, 3 ou 4",
+      "Quantidade": 199,
+      "Tratamento": "Mantidos; significado não documentado"
+    }
+  ],
+  "removidos": [
+    {
+      "AppointmentID": 5679978,
+      "Age": 38,
+      "WaitingDays": -1,
+      "Motivo": "Consulta anterior ao agendamento"
+    },
+    {
+      "AppointmentID": 5715660,
+      "Age": 19,
+      "WaitingDays": -1,
+      "Motivo": "Consulta anterior ao agendamento"
+    },
+    {
+      "AppointmentID": 5664962,
+      "Age": 22,
+      "WaitingDays": -1,
+      "Motivo": "Consulta anterior ao agendamento"
+    },
+    {
+      "AppointmentID": 5686628,
+      "Age": 81,
+      "WaitingDays": -6,
+      "Motivo": "Consulta anterior ao agendamento"
+    },
+    {
+      "AppointmentID": 5655637,
+      "Age": 7,
+      "WaitingDays": -1,
+      "Motivo": "Consulta anterior ao agendamento"
+    },
+    {
+      "AppointmentID": 5775010,
+      "Age": -1,
+      "WaitingDays": 0,
+      "Motivo": "Idade negativa (-1)"
+    }
+  ],
+  "base_limpa": {
+    "consultas": 110521,
+    "pacientes": 62298,
+    "faltas": 22314,
+    "taxa_falta": 0.2018982817745044
+  },
+  "taxa_por_espera": {
+    "0": {
+      "consultas": 38562,
+      "faltas": 1792,
+      "taxa": 0.046470618743841084
+    },
+    "1–3": {
+      "consultas": 14675,
+      "faltas": 3359,
+      "taxa": 0.22889267461669505
+    },
+    "4–7": {
+      "consultas": 17510,
+      "faltas": 4413,
+      "taxa": 0.25202741290691033
+    },
+    "8–14": {
+      "consultas": 12025,
+      "faltas": 3664,
+      "taxa": 0.3046985446985447
+    },
+    "15–30": {
+      "consultas": 17371,
+      "faltas": 5661,
+      "taxa": 0.32588797420989
+    },
+    "31–60": {
+      "consultas": 8283,
+      "faltas": 2829,
+      "taxa": 0.34154291923216223
+    },
+    "61+": {
+      "consultas": 2095,
+      "faltas": 596,
+      "taxa": 0.2844868735083532
+    }
+  },
+  "taxa_por_idade": {
+    "0–12": {
+      "consultas": 21035,
+      "faltas": 4306,
+      "taxa": 0.20470644164487758
+    },
+    "13–18": {
+      "consultas": 7830,
+      "faltas": 2040,
+      "taxa": 0.26053639846743293
+    },
+    "19–30": {
+      "consultas": 16763,
+      "faltas": 4141,
+      "taxa": 0.24703215414901866
+    },
+    "31–45": {
+      "consultas": 21953,
+      "faltas": 4691,
+      "taxa": 0.21368377898237143
+    },
+    "46–60": {
+      "consultas": 23179,
+      "faltas": 4131,
+      "taxa": 0.1782216661633375
+    },
+    "61–75": {
+      "consultas": 14370,
+      "faltas": 2136,
+      "taxa": 0.14864300626304802
+    },
+    "76+": {
+      "consultas": 5391,
+      "faltas": 869,
+      "taxa": 0.16119458356520125
+    }
+  },
+  "sms": {
+    "taxa_geral": {
+      "0": 0.16697983715134795,
+      "1": 0.27574544839637
+    },
+    "menor_espera_com_sms": 3,
+    "consultas_mesmo_dia_com_sms": 0,
+    "taxa_espera_3_dias_ou_mais": {
+      "0": 0.3269489384245487,
+      "1": 0.27574544839637
+    },
+    "consultas_espera_3_dias_ou_mais": 60021
+  },
+  "associacoes": [
+    {
+      "Atributo": "Sexo masculino",
+      "Consultas com o atributo": 38685,
+      "Taxa com": 0.19963810262375598,
+      "Taxa sem": 0.2031154295896208,
+      "Qui-quadrado": 1.8653434872450756,
+      "p-valor": 0.172009349904053,
+      "V de Cramér": 0.004108251331642897
+    },
+    {
+      "Atributo": "Bolsa Família",
+      "Consultas com o atributo": 10861,
+      "Taxa com": 0.2373630420771568,
+      "Taxa sem": 0.19803331326510135,
+      "Qui-quadrado": 93.77103096576741,
+      "p-valor": 3.542183519972575e-22,
+      "V de Cramér": 0.029128085623036284
+    },
+    {
+      "Atributo": "Hipertensão",
+      "Consultas com o atributo": 21801,
+      "Taxa com": 0.17301958625751113,
+      "Taxa sem": 0.2089945897204689,
+      "Qui-quadrado": 140.33754565789735,
+      "p-valor": 2.2459543392624007e-32,
+      "V de Cramér": 0.03563399671163384
+    },
+    {
+      "Atributo": "Diabetes",
+      "Consultas com o atributo": 7943,
+      "Taxa com": 0.18003273322422259,
+      "Taxa sem": 0.20359141336348924,
+      "Qui-quadrado": 25.246480769882012,
+      "p-valor": 5.045154209604358e-07,
+      "V de Cramér": 0.015113951394906655
+    },
+    {
+      "Atributo": "Alcoolismo",
+      "Consultas com o atributo": 3360,
+      "Taxa com": 0.20148809523809524,
+      "Taxa sem": 0.20191114304644414,
+      "Qui-quadrado": 0.0014692349019108986,
+      "p-valor": 0.9694240933773812,
+      "V de Cramér": 0.00011529838267921353
+    },
+    {
+      "Atributo": "Deficiência (Handcap > 0)",
+      "Consultas com o atributo": 2239,
+      "Taxa com": 0.18088432335864224,
+      "Taxa sem": 0.20233279769490775,
+      "Qui-quadrado": 6.130383789489425,
+      "p-valor": 0.013287802339268259,
+      "V de Cramér": 0.007447687217641817
+    },
+    {
+      "Atributo": "SMS recebido",
+      "Consultas com o atributo": 35482,
+      "Taxa com": 0.27574544839637,
+      "Taxa sem": 0.16697983715134795,
+      "Qui-quadrado": 1767.9781891546713,
+      "p-valor": 0.0,
+      "V de Cramér": 0.12647830844881036
+    }
+  ],
+  "vazamento_divisao_por_linhas": {
+    "consultas_teste": 22105,
+    "pacientes_teste": 18636,
+    "pacientes_em_ambos": 10435,
+    "consultas_teste_com_paciente_no_treino": 13260,
+    "proporcao": 0.5998642840986202
+  },
+  "divisao_por_paciente": {
+    "treino_consultas": 88416,
+    "teste_consultas": 22105,
+    "treino_pacientes": 49930,
+    "teste_pacientes": 12368,
+    "pacientes_em_ambos": 0,
+    "taxa_falta_treino": 0.201897846543612,
+    "taxa_falta_teste": 0.2019000226193169,
+    "proporcao_teste": 0.20000723844337276
+  },
+  "experimento_A": {
+    "atributos": [
+      "Gender_M",
+      "Age",
+      "Scholarship",
+      "Hipertension",
+      "Diabetes",
+      "Alcoholism",
+      "Handcap",
+      "WaitingDays"
+    ],
+    "teste": {
+      "Referência (classe majoritária)": {
+        "Acurácia": 0.7980999773806831,
+        "Precisão": 0.0,
+        "Recall": 0.0,
+        "F1-score": 0.0,
+        "ROC-AUC": 0.5,
+        "VN": 17642,
+        "FP": 0,
+        "FN": 4463,
+        "VP": 0
+      },
+      "Regressão Logística": {
+        "Acurácia": 0.6914272788961774,
+        "Precisão": 0.33045729076790337,
+        "Recall": 0.5149002912838898,
+        "F1-score": 0.40255758955942894,
+        "ROC-AUC": 0.6675599126227075,
+        "VN": 12986,
+        "FP": 4656,
+        "FN": 2165,
+        "VP": 2298
+      },
+      "Árvore de Decisão": {
+        "Acurácia": 0.5910879891427279,
+        "Precisão": 0.3046448087431694,
+        "Recall": 0.7994622451265965,
+        "F1-score": 0.44117465224111285,
+        "ROC-AUC": 0.7146292636303743,
+        "VN": 9498,
+        "FP": 8144,
+        "FN": 895,
+        "VP": 3568
+      },
+      "MLP": {
+        "Acurácia": 0.5805473874688984,
+        "Precisão": 0.3020824759239444,
+        "Recall": 0.8223168272462469,
+        "F1-score": 0.44184926559113896,
+        "ROC-AUC": 0.7234840672998303,
+        "VN": 9163,
+        "FP": 8479,
+        "FN": 793,
+        "VP": 3670
+      }
+    },
+    "validacao": {
+      "Regressão Logística": {
+        "melhores_parametros": {
+          "C": 0.01
+        },
+        "f1_cv_media": 0.3985641299183035,
+        "f1_cv_dp": 0.005394608489203113,
+        "segundos": 30.8
+      },
+      "Árvore de Decisão": {
+        "melhores_parametros": {
+          "max_depth": 3,
+          "min_samples_leaf": 50
+        },
+        "f1_cv_media": 0.44177978402468365,
+        "f1_cv_dp": 0.0017571914473910439,
+        "segundos": 20.5
+      },
+      "MLP": {
+        "melhores_parametros": {
+          "alpha": 0.001,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ]
+        },
+        "f1_cv_media": 0.44144362342606475,
+        "f1_cv_dp": 0.0018663991537295425,
+        "segundos": 268.3
+      }
+    }
+  },
+  "experimento_B": {
+    "atributos": [
+      "Gender_M",
+      "Age",
+      "Scholarship",
+      "Hipertension",
+      "Diabetes",
+      "Alcoholism",
+      "Handcap",
+      "WaitingDays",
+      "SMS_received"
+    ],
+    "teste": {
+      "Referência (classe majoritária)": {
+        "Acurácia": 0.7980999773806831,
+        "Precisão": 0.0,
+        "Recall": 0.0,
+        "F1-score": 0.0,
+        "ROC-AUC": 0.5,
+        "VN": 17642,
+        "FP": 0,
+        "FN": 4463,
+        "VP": 0
+      },
+      "Regressão Logística": {
+        "Acurácia": 0.6723365754354218,
+        "Precisão": 0.32206861239119305,
+        "Recall": 0.563746358951378,
+        "F1-score": 0.40993890020366597,
+        "ROC-AUC": 0.6701577441220655,
+        "VN": 12346,
+        "FP": 5296,
+        "FN": 1947,
+        "VP": 2516
+      },
+      "Árvore de Decisão": {
+        "Acurácia": 0.5861117394254693,
+        "Precisão": 0.3014743263853584,
+        "Recall": 0.7972215998207484,
+        "F1-score": 0.43750384260682446,
+        "ROC-AUC": 0.7205549144418187,
+        "VN": 9398,
+        "FP": 8244,
+        "FN": 905,
+        "VP": 3558
+      },
+      "MLP": {
+        "Acurácia": 0.5971952047048179,
+        "Precisão": 0.30662718801706873,
+        "Recall": 0.7889312121891104,
+        "F1-score": 0.44161545215100967,
+        "ROC-AUC": 0.7274124105434236,
+        "VN": 9680,
+        "FP": 7962,
+        "FN": 942,
+        "VP": 3521
+      }
+    },
+    "validacao": {
+      "Regressão Logística": {
+        "melhores_parametros": {
+          "C": 0.01
+        },
+        "f1_cv_media": 0.4057508870140019,
+        "f1_cv_dp": 0.0034213611290395602,
+        "segundos": 33.3
+      },
+      "Árvore de Decisão": {
+        "melhores_parametros": {
+          "max_depth": 12,
+          "min_samples_leaf": 200
+        },
+        "f1_cv_media": 0.44296072062226716,
+        "f1_cv_dp": 0.0014773784327931374,
+        "segundos": 36.9
+      },
+      "MLP": {
+        "melhores_parametros": {
+          "alpha": 0.01,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ]
+        },
+        "f1_cv_media": 0.44345096954913804,
+        "f1_cv_dp": 0.0016921133093576585,
+        "segundos": 269.7
+      }
+    }
+  },
+  "interpretacao_A": {
+    "WaitingDays": {
+      "Coeficiente RL (padronizado)": 0.4931,
+      "Importância na árvore": 0.9052
+    },
+    "Age": {
+      "Coeficiente RL (padronizado)": -0.1638,
+      "Importância na árvore": 0.0948
+    },
+    "Handcap": {
+      "Coeficiente RL (padronizado)": -0.0033,
+      "Importância na árvore": 0.0
+    },
+    "Gender_M": {
+      "Coeficiente RL (padronizado)": -0.0175,
+      "Importância na árvore": 0.0
+    },
+    "Scholarship": {
+      "Coeficiente RL (padronizado)": 0.2242,
+      "Importância na árvore": 0.0
+    },
+    "Hipertension": {
+      "Coeficiente RL (padronizado)": -0.0434,
+      "Importância na árvore": 0.0
+    },
+    "Diabetes": {
+      "Coeficiente RL (padronizado)": 0.1313,
+      "Importância na árvore": 0.0
+    },
+    "Alcoholism": {
+      "Coeficiente RL (padronizado)": 0.1556,
+      "Importância na árvore": 0.0
+    }
+  },
+  "bootstrap": [
+    {
+      "Comparação": "MLP − Árvore de Decisão",
+      "Métrica": "F1-score",
+      "Diferença": 0.0006746133500261098,
+      "IC 95% inferior": -0.003023928040213046,
+      "IC 95% superior": 0.004658498341760392,
+      "Conclusiva": false
+    },
+    {
+      "Comparação": "MLP − Árvore de Decisão",
+      "Métrica": "ROC-AUC",
+      "Diferença": 0.008854803669456013,
+      "IC 95% inferior": 0.005004625181008226,
+      "IC 95% superior": 0.012831947801523108,
+      "Conclusiva": true
+    },
+    {
+      "Comparação": "MLP − Regressão Logística",
+      "Métrica": "F1-score",
+      "Diferença": 0.03929167603171002,
+      "IC 95% inferior": 0.02987630692271801,
+      "IC 95% superior": 0.048728406110913565,
+      "Conclusiva": true
+    },
+    {
+      "Comparação": "MLP − Regressão Logística",
+      "Métrica": "ROC-AUC",
+      "Diferença": 0.05592415467712275,
+      "IC 95% inferior": 0.048983280271149475,
+      "IC 95% superior": 0.062481823154906524,
+      "Conclusiva": true
+    },
+    {
+      "Comparação": "Árvore de Decisão − Regressão Logística",
+      "Métrica": "F1-score",
+      "Diferença": 0.03861706268168391,
+      "IC 95% inferior": 0.02968424249914877,
+      "IC 95% superior": 0.047508661769272056,
+      "Conclusiva": true
+    },
+    {
+      "Comparação": "Árvore de Decisão − Regressão Logística",
+      "Métrica": "ROC-AUC",
+      "Diferença": 0.04706935100766674,
+      "IC 95% inferior": 0.03974205345797559,
+      "IC 95% superior": 0.05389355831898301,
+      "Conclusiva": true
+    }
+  ],
+  "sensibilidade": {
+    "Regressão Logística": {
+      "F1 (linhas)": 0.39830288336652525,
+      "F1 (paciente)": 0.40255758955942894,
+      "ROC-AUC (linhas)": 0.6648125565955989,
+      "ROC-AUC (paciente)": 0.6675599126227075
+    },
+    "Árvore de Decisão": {
+      "F1 (linhas)": 0.4396879875195008,
+      "F1 (paciente)": 0.44117465224111285,
+      "ROC-AUC (linhas)": 0.7101530278697818,
+      "ROC-AUC (paciente)": 0.7146292636303743
+    },
+    "MLP": {
+      "F1 (linhas)": 0.43991130820399116,
+      "F1 (paciente)": 0.44184926559113896,
+      "ROC-AUC (linhas)": 0.7190100477993326,
+      "ROC-AUC (paciente)": 0.7234840672998303
+    }
+  },
+  "versoes": {
+    "python": "3.13.4",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2"
+  }
+}

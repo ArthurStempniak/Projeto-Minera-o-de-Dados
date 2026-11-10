@@ -1,0 +1,12 @@
+﻿Verificação,Quantidade,Tratamento
+Valores ausentes,0,Nenhuma imputação necessária
+Linhas duplicadas completas,0,Nenhuma remoção
+AppointmentID repetido,0,Nenhuma remoção
+Duplicadas sem AppointmentID,618,Mantidas como consultas distintas
+Pacientes com mais de uma consulta,24379,Mantidos; agrupados na validação
+Consultas desses pacientes,72607,Mantidas
+Idade negativa,1,Removida
+Idade igual a zero,3539,Mantida
+Idade acima de 100 anos,7,Mantida e registrada como possível anomalia
+Consultas anteriores ao agendamento,5,Removidas
+"Handcap com códigos 2, 3 ou 4",199,Mantidos; significado não documentado

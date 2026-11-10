@@ -1,0 +1,22 @@
+|--- WaitingDays <= 0.5
+|   |--- Age <= 21.5
+|   |   |--- Age <= 6.5
+|   |   |   |--- class: 0
+|   |   |--- Age >  6.5
+|   |   |   |--- class: 0
+|   |--- Age >  21.5
+|   |   |--- Age <= 56.5
+|   |   |   |--- class: 0
+|   |   |--- Age >  56.5
+|   |   |   |--- class: 0
+|--- WaitingDays >  0.5
+|   |--- Age <= 49.5
+|   |   |--- WaitingDays <= 9.5
+|   |   |   |--- class: 1
+|   |   |--- WaitingDays >  9.5
+|   |   |   |--- class: 1
+|   |--- Age >  49.5
+|   |   |--- WaitingDays <= 7.5
+|   |   |   |--- class: 0
+|   |   |--- WaitingDays >  7.5
+|   |   |   |--- class: 1

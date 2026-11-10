@@ -1,0 +1,11 @@
+# Versões usadas para gerar os resultados do artigo (Python 3.13)
+numpy==2.5.4
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Necessários apenas para abrir e executar o notebook
+notebook
+ipykernel

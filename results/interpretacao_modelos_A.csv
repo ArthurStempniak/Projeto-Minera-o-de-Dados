@@ -1,0 +1,9 @@
+﻿,Coeficiente RL (padronizado),Importância na árvore
+WaitingDays,0.4931,0.9052
+Age,-0.1638,0.0948
+Handcap,-0.0033,0.0
+Gender_M,-0.0175,0.0
+Scholarship,0.2242,0.0
+Hipertension,-0.0434,0.0
+Diabetes,0.1313,0.0
+Alcoholism,0.1556,0.0

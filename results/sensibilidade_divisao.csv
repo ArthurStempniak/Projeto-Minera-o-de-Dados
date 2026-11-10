@@ -1,0 +1,4 @@
+﻿,F1 (linhas),F1 (paciente),ROC-AUC (linhas),ROC-AUC (paciente)
+Regressão Logística,0.3983,0.4026,0.6648,0.6676
+Árvore de Decisão,0.4397,0.4412,0.7102,0.7146
+MLP,0.4399,0.4418,0.719,0.7235

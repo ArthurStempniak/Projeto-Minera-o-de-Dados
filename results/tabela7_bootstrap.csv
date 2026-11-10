@@ -1,0 +1,7 @@
+﻿Comparação,Métrica,Diferença,IC 95% inferior,IC 95% superior,Conclusiva
+MLP − Árvore de Decisão,F1-score,0.0007,-0.003,0.0047,False
+MLP − Árvore de Decisão,ROC-AUC,0.0089,0.005,0.0128,True
+MLP − Regressão Logística,F1-score,0.0393,0.0299,0.0487,True
+MLP − Regressão Logística,ROC-AUC,0.0559,0.049,0.0625,True
+Árvore de Decisão − Regressão Logística,F1-score,0.0386,0.0297,0.0475,True
+Árvore de Decisão − Regressão Logística,ROC-AUC,0.0471,0.0397,0.0539,True
